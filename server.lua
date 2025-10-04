@@ -7,7 +7,7 @@ function sendDiscordLog(playerName, playerId, discordID, playerLicense, actionTy
             ["color"] = actionType == "Mes Claim" and 65280 or 16711680, 
             ["author"] = {
                 ["name"] = "Mes Action Log",
-                ["icon_url"] = "https://media.discordapp.net/attachments/1362897907048775832/1371952594091511948/fusionlogo2.png?ex=6832d9ac&is=6831882c&hm=259fccedb3f6e8a8fc041b8bf27d46caf4c83a26799bb3a1f1ef658948f6f012&=&format=webp&quality=lossless"
+                ["icon_url"] = "YOUR_WEBHOOK_HERE"
             },
             ["title"] = string.format("**%s Action**", actionType),
             ["description"] = string.format("**%s** (ID: `%d`) has %s the mes.", playerName, playerId, actionType),
@@ -16,7 +16,7 @@ function sendDiscordLog(playerName, playerId, discordID, playerLicense, actionTy
                 {["name"] = "License", ["value"] = "License: " .. playerLicense, ["inline"] = true}
             },
             ["footer"] = {
-                ["text"] = "https://discord.gg/W7HrHBUPWW"
+                ["text"] = "https://discord.gg/fusionscriptss"
             },
             ["timestamp"] = os.date('!%Y-%m-%dT%H:%M:%SZ')
         }
