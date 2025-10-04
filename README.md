@@ -1,35 +1,40 @@
-# Claimmes Script voor FiveM
+# Claimmes Script for FiveM
 
-Dit script biedt een systeem waarmee spelers een mes kunnen claimen in je FiveM server en het opnieuw kunnen resetten, via de commando's `/claimmes` en `/resetmes`. Het script logt acties naar Discord via webhooks en maakt gebruik van ESX voor de serverintegratie en OxMySQL voor de database interactie.
+This script provides a system where players can claim a knife on your FiveM server and reset it if needed, using the commands `/claimmes` and `/resetmes`. The script logs actions to Discord via webhooks and uses **ESX** for server integration and **OxMySQL** for database interaction.
 
-## Functies
+## Features
 
 1. **Claimmes (`/claimmes`)**
-   - Spelers kunnen het mes claimen als ze het nog niet hebben gedaan.
-   - Wanneer geclaimd, ontvangt de speler een item (`weapon_switchblade`) in zijn inventaris.
-   - De database wordt bijgewerkt om de claimstatus van het mes bij te houden.
-   - Een Discord-webhook logt de claimactie.
+
+   * Players can claim the knife if they haven’t done so already.
+   * When claimed, the player receives an item (`weapon_switchblade`) in their inventory.
+   * The database is updated to track the knife claim status.
+   * A Discord webhook logs the claim action.
 
 2. **Resetmes (`/resetmes`)**
-   - Alleen admins kunnen de claimstatus van een speler resetten.
-   - Reset de mes-claim status naar `FALSE` in de database.
-   - Een Discord-webhook logt de resetactie.
 
-## Installatie
+   * Only admins can reset a player’s claim status.
+   * Resets the knife claim status to `FALSE` in the database.
+   * A Discord webhook logs the reset action.
 
-### Vereisten
+## Installation
 
-- **ESX**: Het script maakt gebruik van de ESX-framework voor spelersbeheer.
-- **OxMySQL**: De database wordt beheerd via OxMySQL.
-- **Ox_Lib**: Wordt gebruikt voor meldingen aan spelers via `ox_lib:notify`.
-- **Discord Webhooks**: Webhooks voor het loggen van acties naar Discord.
+### Requirements
 
-### Stappen om het script te installeren
+* **ESX**: The script uses the ESX framework for player management.
+* **OxMySQL**: The database is handled via OxMySQL.
+* **Ox_Lib**: Used for player notifications via `ox_lib:notify`.
+* **Discord Webhooks**: Webhooks for logging actions to Discord.
 
-1. **Plaats de bestanden in je resource-map**:
-   - Zorg ervoor dat de bestanden in een map binnen je `resources` directory worden geplaatst, bijvoorbeeld `fusion-claimmes`.
+### Installation Steps
 
-2. **Voeg het script toe aan je serverconfiguratie**:
-   Voeg het volgende toe aan je `server.cfg`:
+1. **Place the files in your resources folder**:
+
+   * Ensure the files are in a folder inside your `resources` directory, e.g., `fusion-claimmes`.
+
+2. **Add the script to your server configuration**:
+   Add the following line to your `server.cfg`:
+
    ```bash
    ensure fusion-claimmes
+   ```
